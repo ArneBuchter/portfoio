@@ -1,0 +1,48 @@
+.mydata{
+    &__top{
+    margin: 5rem 0 0 18vw;
+    border-left: 3px solid red;
+    }
+    &__heading{
+        font-size: 2rem;
+        margin: 1rem 0 0 0;
+        padding-left: 1rem;
+    }
+    &__text{
+        color: gray;
+        margin: 0;
+        padding-left: 1rem;
+    }
+    &__data{
+        margin: 8rem 0 0 15vw;
+        display: flex;
+    }
+    &__img_wrapper{
+        width: 50%;
+        border: solid 5px;
+        background: ghostwhite;
+    }
+    &__img{
+        max-width: 60%;
+        transform: rotate(90deg);
+        border: solid 3px gray;
+    }
+    &__static{
+        width: 50%;
+        justify-self: flex-end;
+        margin-right: 3rem;
+        &_text{
+            color: gray;
+        }
+    }
+    &__smallinfo{
+        display: grid;
+        grid-template-columns:  0.7fr 1fr 0.7fr 1fr;
+        grid-auto-rows: auto;
+        align-items: center;
+        padding: 3px;
+        border: solid 5px grey;
+        margin-bottom: 1rem;
+    }
+}
+

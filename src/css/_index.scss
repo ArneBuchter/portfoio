@@ -1,28 +1,36 @@
+
 .index-hero{
-    width: 85vw;
-    margin-left: 15vw;
+    
+    width: 83.8vw;
+    margin: 0 0 0 15vw;
+    padding: 0;
+    position: relative;
+    opacity: 0.85;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/images/storebaelt.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: 500ms ease-in-out;
 }
 
-.index-hero_profileimg-wrapper {
+.index-hero_profileimg{
+    margin: 12rem auto 0 auto;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border: solid 3px gray;
-    margin: 12rem auto 0 auto;
-}
-
-.index-hero_profileimg{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
     transform: rotate(90deg);
     object-fit: cover;
 }
 
 .index-hero_heading{
-    margin-left: 15vw;
     text-align: center;
-    margin: 10px 0;
+    margin: 0;
 }
 .index-hero_color{
     color: red;
@@ -30,4 +38,32 @@
 .index-hero_titel{
     margin-left: 15vw;
     text-align: center;
+    color: white;
+}
+.index-services{
+    margin: 3rem 0 0 15vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-auto-rows: auto;
+    background: ghostwhite;
+    &__skillset{
+        justify-self: center;
+        margin: 2rem;
+        padding: 2rem;
+        width: 250px;
+        background-color: rgb(240, 240, 240);
+        box-shadow: 10px 0 5px -2px #888;
+    }
+    &__rating{
+        display: flex;
+        font-size: 2rem;
+    }
+    &__stars{
+        &_yellow{
+            color: gold;
+        }
+        &_black{
+            color: black;
+        }
+    }
 }
