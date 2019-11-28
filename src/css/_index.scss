@@ -37,11 +37,14 @@
 }
 .index-hero_titel{
     margin-left: 15vw;
+    font-size: 1.2rem;
     text-align: center;
     color: white;
 }
 .index-services{
-    margin: 3rem 0 0 15vw;
+    position: relative;
+    margin: 2rem 0 0 15vw;
+    padding: 11rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     grid-auto-rows: auto;
@@ -66,4 +69,38 @@
             color: black;
         }
     }
+    
+}
+.index-portfolio{
+    position: relative;
+    margin-left: 15vw;
+    padding: 13rem 6rem;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    &__container{
+        width: 250px;
+        height: 250px;
+        transform: rotate(45deg);
+        border-radius: 25px;
+        border: solid 5px;
+        text-decoration: none;
+        color: gray;
+    }
+    &__textbox{
+        &_arvi, &_ubnex, &_kumite{
+                transform: rotate(-45deg);
+                font-size: 2rem;
+                margin: 48% 0 0 0;
+                text-align: center;
+                font-weight: 900;
+        }
+    }
+}
+.absolute{
+    position: absolute;
+    width: 350px;
+    top: 0;
+    right: 58vw;
 }

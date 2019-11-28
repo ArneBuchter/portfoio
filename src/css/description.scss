@@ -1,0 +1,17 @@
+
+.description{
+&__top{
+    margin: 5rem 0 0 18vw;
+    border-left: 3px solid red;
+    }
+    &__heading{
+        font-size: 2rem;
+        margin: 1rem 0 0 0;
+        padding-left: 1rem;
+    }
+    &__text{
+        color: gray;
+        margin: 0;
+        padding-left: 1rem;
+    }
+}
