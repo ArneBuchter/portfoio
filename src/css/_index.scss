@@ -1,8 +1,11 @@
-
+#contactMe{
+    text-decoration: none;
+    color: black;
+}
 .index-hero{
     
-    width: 85%;
-    margin: 0 0 0 15%;
+    width: 100%;
+    margin: 0;
     padding: 0;
     position: relative;
     opacity: 0.85;
@@ -16,10 +19,11 @@
     justify-content: center;
     align-content: center;
     transition: 500ms ease-in-out;
+    box-sizing: border-box;
 }
 
 .index-hero_profileimg{
-    margin: 12rem auto 0 auto;
+    margin: 10rem auto 0 auto;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -48,7 +52,7 @@
 
     &__wrapper{
         opacity: 0;
-        margin-left: 15%;
+        margin-left: 0;
         margin-top: 150px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -85,15 +89,13 @@
     &__img{
         border-radius: 25px;
         text-decoration: none;
+        height: 40vh;
         color: gray;
     }
 
     &__display{
-        margin-left: 15%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 13em 6em;
+        margin-left: 0;
+        padding: 10em 1em;
     }
 
     &__textbox{
@@ -112,13 +114,37 @@
 }
 .absolute{
     position: absolute;
-    width: 350px;
     top: 0;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (min-width: 1000px){
+    .index-hero_profileimg{
+        margin: 12rem auto 0 auto;
+    }
 
-    .nav{
-        display: none;
+    .absolute{
+        width: 350px;
+    }
+    .index-hero{
+        width: 85%;
+        margin: 0 0 0 15%;
+    }
+    .index-services{
+        &__wrapper{
+            margin-left: 15%;
+        }
+    }
+    .index-portfolio{
+        &__display{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 2rem;
+        padding: 13em 6em;
+        margin-left: 15%;
+        }
+        &__img{
+            height: 50vh;
+        }
     }
 }

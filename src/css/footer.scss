@@ -1,0 +1,19 @@
+.footer{
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    padding: 1rem;
+}
+@media screen and (min-width: 1000px){
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 1rem;
+        &__text{
+            text-decoration: none;
+            color: grey;
+            margin-left: 15%;
+            margin-block-start: 0;
+        }
+    }
+}

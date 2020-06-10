@@ -1,3 +1,9 @@
+
+.nav{
+    display: none;
+}
+
+@media screen and(min-width: 1000px){
 .nav{
     position: fixed;
     display: flex;
@@ -32,4 +38,5 @@
     &:hover{
         color: white;
     }
+}
 }
