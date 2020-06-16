@@ -88,10 +88,10 @@ gulp.task('dev', function(done){
 });
 
 gulp.task('build', function(done) {
-    html();
-    scss();
-    javaScript();
-//    json();
-    images();
-    done();
+    html(done);
+    scss(done);
+    javaScript(done);
+//    json(done);
+    images(done);
+    done(done);
 });
