@@ -91,7 +91,7 @@ gulp.task('build', function(done) {
     html();
     scss();
     javaScript();
-    json();
+//    json();
     images();
     done();
 });
