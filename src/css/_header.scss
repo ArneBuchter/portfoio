@@ -12,7 +12,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
-        height: 40px;
+        height: 60px;
         z-index: 3;
         box-sizing: border-box;
 
@@ -27,7 +27,19 @@
         }
 
         &__img{
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .header{
+
+        height: 40px;
+
+        &__img{
             width: 40%;
         }
     }
 }
+

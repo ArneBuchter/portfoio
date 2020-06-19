@@ -9,14 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const callbackfunc = (entries, self) => {
         entries.forEach(entry => {
-             console.log(entry);
             if (entry.isIntersecting == true) {
                 entry.target.classList.add('fancy');
                 self.unobserve(entry.target);
             }
-/*             else {
-                entry.target.classList.remove('fancy');
-            } */
         });
     }
 
