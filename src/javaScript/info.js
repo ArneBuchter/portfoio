@@ -17,6 +17,7 @@ navInfo.addEventListener('click', (e) => {
 
 close.addEventListener('click', () => {
     info.classList.remove('info__open');
+    wrapper.classList.remove('info__wrapper-on')
 })
 
 mobil.addEventListener('click', (e) => {
