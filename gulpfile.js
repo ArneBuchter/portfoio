@@ -12,7 +12,7 @@ function html(done) {
     gulp.src('./src/html/templates/*.ejs')
         .pipe(ejs())
         .pipe(rename(function(path){
-            if(path.basename != "index") {
+            if(path.basename != "index" && path.basename != "offline") {
                 path.dirname = path.basename;
                 path.basename = "index";
             } 
@@ -27,6 +27,39 @@ function watchHtml() {
     gulp.watch("./src/html/**/*.ejs", { ignoreInitial: false }, html);
 }
 
+function favicon(done) {
+    gulp.src('./src/images/favicon/favicon.*')
+        .pipe(gulp.dest('./dist'))
+        .pipe(connect.reload());
+        done()
+}
+
+function watchFavicon() {
+    gulp.watch('./src/images/favicon/favicon.*', { ignoreInitial: false }, favicon);
+}
+
+function maniImg(done) {
+    gulp.src('./src/images/manifest/*')
+        .pipe(gulp.dest('./dist/assets/images/mani'))
+        .pipe(connect.reload());
+        done()
+}
+
+function watchManiImg() {
+    gulp.watch('./src/images/manifest/*', { ignoreInitial: false }, maniImg);
+}
+
+function manifest(done) {
+    gulp.src('./src/manifest/manifest.webmanifest')
+        .pipe(gulp.dest('./dist'))
+        .pipe(connect.reload());
+        done()
+}
+
+function watchManifest() {
+    gulp.watch('./src/manifest/manifest.webmanifest', { ignoreInitial: false }, manifest);
+}
+
 function scss(done) {
     gulp.src('./src/css/**/*.scss')
         .pipe(sass())
@@ -34,6 +67,7 @@ function scss(done) {
         .pipe(connect.reload());
     done();
 }
+
 
 function watchScss() {
     gulp.watch('./src/css/**/*.scss', { ignoreInitial: false }, scss);
@@ -49,6 +83,17 @@ function javaScript(done){
 
 function watchJavaSript() {
     gulp.watch('./src/javaScript/**/*.js', { ignoreInitial: false }, javaScript);
+}
+
+function serviceWorker(done){
+    gulp.src('./src/*.js')
+    .pipe(gulp.dest('./dist'))
+    .pipe(connect.reload());
+    done();
+}
+
+function watchServiceWorker() {
+    gulp.watch('./src/*.js', { ignoreInitial: false }, serviceWorker);
 }
 
 /* function json(done) {
@@ -76,8 +121,12 @@ function Watchimages() {
 
 gulp.task('dev', function(done){
     watchHtml();
+    watchFavicon();
+    watchManifest();
+    watchManiImg();
     watchScss();
     watchJavaSript();
+    watchServiceWorker();
     //watchJson();
     Watchimages();
     connect.server({
@@ -91,7 +140,11 @@ gulp.task('build', function(done) {
     html(done);
     scss(done);
     javaScript(done);
+    serviceWorker(done);
 //    json(done);
     images(done);
+    favicon(done);
+    manifest(done);
+    maniImg(done);
     done(done);
 });

@@ -1,0 +1,21 @@
+{
+    "name": "Arne Buchter",
+    "short_name": "Arne",
+    "start_url": "index.html",
+    "background_color": "rgb(204, 203, 214)",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/assets/images/mani/marioios.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/images/mani/mario.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "theme_color": "rgb(204, 203, 214)",
+    "orientation": "portrait-primary"
+}
